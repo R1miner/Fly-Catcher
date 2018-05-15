@@ -3,20 +3,25 @@ package sample;
 
 import javafx.fxml.FXML;
 
+import javafx.geometry.Bounds;
 import javafx.scene.layout.AnchorPane;
 
 import javafx.scene.shape.Circle;
-import javafx.scene.shape.Polygon;
+import javafx.scene.shape.Rectangle;
 
 
 public class Movement {
+
     public static Main main;
-    public double posX, posY;
+    public static double playerPosY;
+    public static Double playerPosX;
+    public static Double flyPosY;
+    public static Double flyPosX;
 
     @FXML
     public Circle player;
     @FXML
-    public Polygon fly;
+    public Rectangle fly;
     @FXML
     public AnchorPane pane;
 
@@ -41,5 +46,14 @@ public class Movement {
     }
 
     public void collision() {
+        playerPosY=player.getLayoutY();
+        playerPosX=player.getLayoutX();
+        flyPosY=fly.getLayoutY();
+        flyPosX=fly.getLayoutX();
+        System.out.println(playerPosY+"\t"+playerPosX+"\t"+flyPosY+"\t"+flyPosX);
+
+        if(playerPosY>=104&&playerPosY<=132&&playerPosX<=285&&playerPosX>=253){
+
+        }
     }
 }

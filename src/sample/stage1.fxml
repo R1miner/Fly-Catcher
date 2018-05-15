@@ -1,31 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.lang.Double?>
-<?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.paint.*?>
 <?import javafx.scene.paint.Color?>
-<?import javafx.scene.shape.*?>
 <?import javafx.scene.shape.Circle?>
-<?import javafx.scene.shape.Polygon?>
+<?import javafx.scene.shape.Rectangle?>
 
-<AnchorPane id="AnchorPane" fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="sample.Movement">
+<AnchorPane id="AnchorPane" fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Movement">
   <children>
-    <Polygon fx:id="fly" layoutX="269.0" layoutY="112.0" scaleX="0.31" scaleY="0.32" stroke="$x2" strokeType="INSIDE">
-      <fill>
-        <Color blue="0.384" green="0.600" red="0.000" fx:id="x2" />
-      </fill>
-      <points>
-        <Double fx:value="-50.0" />
-        <Double fx:value="40.0" />
-        <Double fx:value="50.0" />
-        <Double fx:value="40.0" />
-        <Double fx:value="0.0" />
-        <Double fx:value="-60.0" />
-      </points>
-    </Polygon>
-    <Circle fx:id="player" cache="false" layoutX="269.0" layoutY="200.0" mouseTransparent="false" pickOnBounds="false" radius="31.5" stroke="$x1" strokeType="INSIDE">
+      <Rectangle fx:id="fly" arcHeight="5.0" arcWidth="5.0" fill="#2a6f22" height="29.0" layoutX="255.0" layoutY="103.0" stroke="BLACK" strokeType="INSIDE" width="29.0" />
+    <Circle fx:id="player" cache="false" layoutX="269.0" layoutY="200.0" mouseTransparent="false" opacity="0.39" pickOnBounds="false" radius="31.5" stroke="BLACK" strokeType="INSIDE">
       <fill>
         <Color blue="0.576" green="0.000" red="0.800" fx:id="x1" />
       </fill>

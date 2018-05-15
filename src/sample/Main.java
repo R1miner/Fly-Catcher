@@ -18,6 +18,7 @@ public class Main extends Application {
     public static Stage primaryStage;
     public static Scene scene;
     public static FXMLLoader loader1;
+
     @FXML
     public Circle player;
 
