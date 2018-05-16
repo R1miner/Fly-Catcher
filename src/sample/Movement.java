@@ -59,6 +59,7 @@ public class Movement {
         System.out.println(playerPosY+"\t"+playerPosX+"\t"+flyPosY+"\t"+flyPosX);
 
         if(playerPosY>=104&&playerPosY<=132&&playerPosX<=285&&playerPosX>=253){
+
             ++score;
             points.setText("Points: "+score);
             fly.setLayoutY(ThreadLocalRandom.current().nextInt(10, 360 + 1));
