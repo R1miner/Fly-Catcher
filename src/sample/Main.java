@@ -5,7 +5,6 @@ import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
-import javafx.scene.image.Image;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.AnchorPane;
@@ -18,9 +17,6 @@ public class Main extends Application {
     public static Stage primaryStage;
     public static Scene scene;
     public static FXMLLoader loader1;
-
-    @FXML
-    public Circle player;
 
     @Override
     public void start(Stage primaryStage) {

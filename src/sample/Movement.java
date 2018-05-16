@@ -8,15 +8,19 @@ import javafx.scene.layout.AnchorPane;
 
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.Rectangle;
+import javafx.scene.text.Text;
 
+import java.util.Random;
+import java.util.concurrent.ThreadLocalRandom;
 
 public class Movement {
 
     public static Main main;
     public static double playerPosY;
-    public static Double playerPosX;
-    public static Double flyPosY;
-    public static Double flyPosX;
+    public static double playerPosX;
+    public static double flyPosY;
+    public static double flyPosX;
+    public static int score=0;
 
     @FXML
     public Circle player;
@@ -24,6 +28,8 @@ public class Movement {
     public Rectangle fly;
     @FXML
     public AnchorPane pane;
+    @FXML
+    public Text points;
 
     public void setMain(Main main) {
         Movement.main = main;
@@ -53,7 +59,12 @@ public class Movement {
         System.out.println(playerPosY+"\t"+playerPosX+"\t"+flyPosY+"\t"+flyPosX);
 
         if(playerPosY>=104&&playerPosY<=132&&playerPosX<=285&&playerPosX>=253){
+            ++score;
+            points.setText("Points: "+score);
+            fly.setLayoutY(ThreadLocalRandom.current().nextInt(10, 360 + 1));
+            fly.setLayoutX(ThreadLocalRandom.current().nextInt(10, 570 + 1));
 
         }
     }
+
 }
