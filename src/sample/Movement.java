@@ -58,7 +58,7 @@ public class Movement {
         flyPosX=fly.getLayoutX();
         System.out.println(playerPosY+"\t"+playerPosX+"\t"+flyPosY+"\t"+flyPosX);
 
-        if(playerPosY>=104&&playerPosY<=132&&playerPosX<=285&&playerPosX>=253){
+        if(playerPosY>=flyPosY-10&&playerPosY<=flyPosY+30&&playerPosX<=flyPosX+30&&playerPosX>=flyPosX-10){
 
             ++score;
             points.setText("Points: "+score);
